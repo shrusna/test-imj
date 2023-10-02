@@ -3,9 +3,9 @@ import { useState } from "react";
 const TableTransaction = (props) => {
     const { data, offset, page, address, handleOffsetChange, handlePageChange } = props
     const [filterAddress, setFilterAddress] = useState('');
+
     const filteredData = data.filter((transaction) => {
         const matchesFilterAddress = transaction.to.toLowerCase().includes(filterAddress.toLowerCase());
-
         return matchesFilterAddress;
     });
 
@@ -16,6 +16,7 @@ const TableTransaction = (props) => {
                     <h1 className="text-3xl font-extrabold">{address}'s Transaction</h1>
                 </div>
             </div>
+
             <div className="w-full overflow-x-auto shadow-md sm:rounded-lg px-6 pt-8">
                 <div className="flex items-center justify-end pb-4 pt-8">
                     <div className="pb-4 bg-white">
@@ -101,8 +102,8 @@ const TableTransaction = (props) => {
                         </ul>
                     </nav >
                 </div>
-            </div >
-        </div >
+            </div>
+        </div>
     )
 }
 

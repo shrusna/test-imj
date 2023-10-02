@@ -9,7 +9,12 @@ export default function ContentLayout() {
                     </svg>
                     <span className="self-center text-xl font-semibold whitespace-nowrap px-2">OneBlock</span>
                 </a>
-                <ul className="space-y-2 pt-8 font-medium">
+                <div className="flex flex-col items-center py-10">
+                    <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src="/src/assets/dp.jpeg" alt="Bonnie image" />
+                    <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Syahrul Husna</h5>
+                    <span className="text-sm text-gray-500 dark:text-gray-400">Software Engineer</span>
+                </div>
+                <ul className="space-y-2 font-medium">
                     <li>
                         <a href="/dashboard" className="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100 group">
                             <svg className="w-6 h-6 text-gray-800 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">

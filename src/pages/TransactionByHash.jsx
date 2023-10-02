@@ -14,7 +14,6 @@ const TransactionByHashPage = () => {
         try {
             const data = await find_OneTransactionHash(txHash);
             setTransactionData(data);
-            console.log(data)
         } catch (error) {
             console.error("Error fetching transaction data: ", error);
         }
@@ -25,11 +24,9 @@ const TransactionByHashPage = () => {
         <>
             <ContentLayout />
             <div className="p-4 sm:ml-64">
-
                 <div className='h-screen flex flex-col px-96 items-start justify-center'>
                     <FormByHash onFormSubmit={handleSubmit} />
                     {transactionData && <CardTransaction transactionData={transactionData} />}
-
                 </div>
             </div>
         </>
