@@ -1,8 +1,8 @@
-import axios from "axios";
 
-const API_URL = "https://api.etherscan.io/api";
-const API_KEY = "HPD72XVG1GEME8NNEGDFEWI7E6TYCBRXF3";
-const BIT_API_KEY = 'f35fa527-9389-4ee2-aa15-1b2bbd3b687a';
+import axios from "axios";
+const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
+const API_URL = import.meta.env.VITE_REACT_APP_API_URL;
+const BIT_API_KEY = import.meta.env.VITE_REACT_APP_BIT_API_KEY
 
 export async function find_AllTransaction(address, page, offset) {
     try {
@@ -51,10 +51,6 @@ export async function find_OneTransactionHash(txhash) {
         console.error("Error fetching transaction data: ", error);
         throw error;
     }
-
-}
-
-export async function find_ListTransactionAddress(address, page, offset) {
 
 }
 
