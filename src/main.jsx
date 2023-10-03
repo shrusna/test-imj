@@ -11,7 +11,7 @@ import TransactionByHash from './pages/TransactionByHash'
 
 const router = createBrowserRouter([
   {
-    path: '/dashboard',
+    path: '/',
     element: <Dashboard />,
   },
   {
